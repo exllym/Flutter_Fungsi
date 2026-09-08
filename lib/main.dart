@@ -1,38 +1,32 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Tes());
+  runApp(Coba());
 }
 
-class Tes extends StatefulWidget {
+class Coba extends StatefulWidget {
   @override
-  State<Tes> createState() => Tes_State();
+  State<Coba> createState() => Coba_State();
 }
 
-class Tes_State extends State<Tes> {
+class Coba_State extends State<Coba> {
   @override
-  int a = 0;
+  int angka = 0;
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(),
         body: Column(
           children: [
-            Text("$a", style: TextStyle(fontSize: 30)),
             ElevatedButton(
                 onPressed: () {
                   setState(() {
-                    a++;
+                    angka++;
                   });
                 },
-                child: Text("login")),
-            IconButton(
-                onPressed: () {
-                  setState(() {
-                    a--;
-                  });
-                },
-                icon: Icon(Icons.turn_left)),
+                child: Text("Ok")),
+            Text("angka $angka"),
           ],
         ),
       ),
